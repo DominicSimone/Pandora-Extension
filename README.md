@@ -1,3 +1,4 @@
 # Pandora-Extension
-Adds hotkeys to play/pause/skip songs on Pandora \n
-Code coming soon
+Adds hotkeys to play/pause/skip songs on Pandora 
+
+
