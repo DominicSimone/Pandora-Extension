@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pandora Control",
+  "description": "This extension allows global toggle of Pandora stream",
+  "version": "1.1",
+  
+  "icons": {
+	"128": "icon19.png"
+   },
+
+  "commands": {
+        "play/pause": {
+			"suggested_key": "Alt+E",
+			"global": true,
+			"description": "Toggle music"
+		},
+		"skip": {
+			"suggested_key": "Alt+F",
+			"global": true,
+			"description": "Skip song"
+		}
+    },
+
+ "content_scripts": [
+       {
+	    "matches": ["https://www.pandora.com/*"],
+	    "js": [ "mycontent.js"]
+	    
+	}
+       
+   ],
+  
+  "background": {
+	    "persistent": false,
+	    "scripts": ["background.js"]
+   },
+  
+  "permissions": [
+    "tabs",
+    "https://www.pandora.com/*"
+  ]
+}
