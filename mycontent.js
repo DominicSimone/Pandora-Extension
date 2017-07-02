@@ -1,5 +1,11 @@
 // updates title of tab to name of song and artist
 function setTitle() {
-    document.title=document.getElementsByClassName("songTitle")[0].innerHTML + " - " + document.getElementsByClassName("artistSummary")[0].innerHTML;
+    if(typeof document.getElementsByClassName("Marquee__wrapper__content__child")[0] == 'undefined'){
+		document.title = document.getElementsByClassName("Marquee__wrapper__content")[0].innerHTML;
+	}
+	else{
+		document.title = document.getElementsByClassName("Marquee__wrapper__content__child")[0].innerHTML;
+	}
+
 }
 var interval = setInterval(setTitle, 3000);
